@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Paytone+One&display=swap" rel="stylesheet">
+
+    <title>Color Guesser</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>
+      Color Mixer Game
+    </h1>
+    <p>
+      Did you know every computer display color (all 16,777,216 of them!) <br> can be
+      made from mixing just red, green and blue?
+    <br>
+      Can you figure out how to recreate a color by mixing these primary colors
+      together?
+    </p>
+
+    <div class="row" id="first-row">
+      <div class="col">
+        <h2>
+          Step 1: <br> Get a random color!
+        </h2>
+        <div class="text-center">
+          <button
+            type="button"
+            id="color-generator-btn"
+            class="btn btn-primary"
+          >
+            CLICK FOR NEW COLOR
+          </button>
+        </div>
+
+        <div id="color-box"></div>
+      </div>
+      <div class="col">
+        <h2>
+          Step 2: <br> Try to make this color!
+        </h2>
+
+        <div class="slidecontainer">
+          <span id="redOutput">Red: </span>
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value="127"
+            class="slider"
+            id="redValueSlider"
+          />
+        </div>
+        <div class="slidecontainer">
+          <span id="greenOutput">Green: </span>
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value="127"
+            class="slider"
+            id="greenValueSlider"
+          />
+        </div>
+
+        <div class="slidecontainer">
+          <span id="blueOutput">Blue: </span>
+          <input
+            type="range"
+            min="0"
+            max="255"
+            value="127"
+            class="slider"
+            id="blueValueSlider"
+          />
+        </div>
+      </div>
+
+      <div class="col">
+        <h2>
+          Step 3: <br> Check your answer!
+        </h2>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" id="check-btn" >
+            CLICK TO CHECK
+          </button>
+        </div>
+        <div id="check-color-box" class=" "></div>
+      </div>
+    </div>
+    
+    <div class="row" id="second-row">
+      <div class="col">
+        <div id="hintHeader">
+        </div>
+        <div id="hintButton">
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div id="howFarAwayRed">
+        </div>
+        </div>
+        <div class="row">
+          <div id="howFarAwayGreen">
+        </div>
+        </div>
+        <div class="row">
+          <div id="howFarAwayBlue">
+        </div>
+        </div>
+        
+      </div> 
+    <div class="col">
+      <div class="row">
+        <div id="checkAnswerRed">
+      </div>
+      </div>
+      <div class="row">
+        <div id="checkAnswerGreen">
+      </div>
+      </div>
+      <div class="row">
+        <div id="checkAnswerBlue">
+      </div>
+      </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div id="answerHeader">
+        </div>
+        </div>
+        <div class="row">
+           <div id="answerButton">
+        </div>
+        </div>
+        <div class="row">
+          <div id="answer">
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
